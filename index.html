@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en-US">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="description" content="simple GET request">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Find National Parks</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/5.0.0/normalize.css" type="text/css">
+    <link rel="stylesheet" href="style.css" type="text/css">
+</head>
+
+<body>
+    <form role="form" class="search" action="#" method="post">
+        <fieldset name="search-box">
+            <legend>National Park Search Tool</legend>
+            <div class="search-input">
+                <div class="park-code">
+                    <label for="code">Enter 2 character state codes (separate with comma if search for multiple states)</label>
+                    <input placeholder="NY,NJ" type="text" id="code"
+                        required>
+                </div>
+                <div class="return-number">
+                    <label for="max-results">Maximum results to return</label>
+                    <input type="number" name="max-number" id="max-results" placeholder="10" required>
+                </div>
+            </div>
+            <button type="submit">search</button>
+        </fieldset>
+    </form>
+    <div class="hidden">
+        <p>National Parks we have:</p>
+        <div class="result"></div>
+    </div>
+    <script src="https://code.jquery.com/jquery-3.4.1.min.js"
+        integrity="sha384-vk5WoKIaW/vJyUAd9n/wmopsmNhiy+L2Z+SBxGYnUkunIxVxAv/UtMOhba/xskxh"
+        crossorigin="anonymous"></script>
+    <script type="text/javascript" src="script.js"></script>
+</body>
+
+</html>
